@@ -2,7 +2,7 @@ const navToggle = document.querySelector(".nav-toggle");
 const menus = document.querySelector(".menus");
 const menuArray = document.querySelectorAll(".menu");
 
-navToggle.addEventListener("click", function (e) {
+navToggle.addEventListener("click", function () {
   navToggle.classList.toggle("toggle-icon");
   menus.classList.toggle("toggle-menus");
   // close all dropdown when menus close
@@ -20,7 +20,7 @@ navToggle.addEventListener("click", function (e) {
 menuArray.forEach((menu) => {
   const menuTitle = menu.querySelector(".menu-title");
   // show only one dropdown menu at a time
-  menuTitle.addEventListener("click", function (e) {
+  menuTitle.addEventListener("click", function () {
     menuArray.forEach((element) => {
       if (element !== menu) {
         element.classList.remove("toggle-dropdown");
